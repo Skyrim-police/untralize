@@ -1,1 +1,1 @@
-worker: python untralize.py
+worker: python bot.py

@@ -42,11 +42,6 @@ async def unban( ctx, *, member = None ):
             user = ban_entry.user
             await ctx.guild.unban( user )
             await ctx.send(embed = discord.Embed(description = (f"**{member} has been unbanned**"),color=0xc582ff))
- 
-@bot.event
-async def on_ready():
-    game = discord.Game(r"!help")
-    await bot.change_presence(status=discord.Status.online, activity=game)
-    
+  
 token = os.environ.get('Bot_token')
 bot.run(str(token))
